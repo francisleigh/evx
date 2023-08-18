@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "evx",
     "name": "evx",
     "slug": "evx",
     "version": "1.0.0",
@@ -11,20 +12,37 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
+    "experiments": {
+      "typedRoutes": true
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tankalabs.evx"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.tankalabs.evx"
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9e36daff-3b02-4188-8395-7f770ccc93d0"
+      }
+    },
+    "owner": "tankalabs",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/9e36daff-3b02-4188-8395-7f770ccc93d0"
+    },
+    "plugins": ["expo-router"]
   }
 }
