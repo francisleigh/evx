@@ -1,12 +1,7 @@
-import Text from "../components/Text";
-import Card from "../components/Card";
-import { Button, View } from "react-native";
-import { GUTTER } from "../constants/spacing";
-import useWindow from "../hooks/useWindow";
+import { Button } from "react-native";
 import { Link, useRouter } from "expo-router";
 
 export default function Page() {
-  const { viewport } = useWindow();
   const router = useRouter();
   return (
     <>
@@ -22,40 +17,5 @@ export default function Page() {
         onPress={() => router.push("/events/1234")}
       />
     </>
-
-    // <>
-    //   <View
-    //     style={[
-    //       viewport !== "mobile" && { flexDirection: "row" },
-    //       { gap: GUTTER },
-    //     ]}
-    //   >
-    //     <Card bg={"background"}>
-    //       <Text variant={"h1"}>{viewport}</Text>
-    //       <Text variant={"h2"}>Home page!</Text>
-    //       <Text>Home page!</Text>
-    //       <Text variant={"link"}>Home page!</Text>
-    //     </Card>
-    //
-    //     <Card bg={"background"}>
-    //       <Text variant={"h1"}>{viewport}</Text>
-    //       <Text variant={"h2"}>Home page!</Text>
-    //       <Text>Home page!</Text>
-    //       <Text variant={"link"}>Home page!</Text>
-    //     </Card>
-    //   </View>
-    //
-    //   <View
-    //     style={[
-    //       viewport !== "mobile" && { flexDirection: "row" },
-    //       { gap: GUTTER },
-    //     ]}
-    //   >
-    //     <Button
-    //       onPress={() => router.push("/events/(manage)/1234")}
-    //       title={"events/(manage)/1234"}
-    //     />
-    //   </View>
-    // </>
   );
 }
